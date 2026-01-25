@@ -15,6 +15,7 @@ Production: Production Product
 ## ETL Process 
 This process describes the various steps taken from ETL to analysis
 The path followed was:
+<img width="695" height="496" alt="Image" src="https://github.com/user-attachments/assets/cd3c5277-38b2-4be7-8c16-9db87e5e09a9" />
 ### Data extraction
 The start point was to establish the connection between Power BI and SQL Server Management Studio, facilitating the importation of relevant tables for the analysis (Sales Customer, Sales SalesOrder Details, Sales SalesOrderHeader, Sales SalesTerritory, Production ProductCategory, Production ProductSubcategory and Production Product).
 ### Data Cleaning
