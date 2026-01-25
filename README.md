@@ -10,7 +10,7 @@ The analysis is based on the Adventure Works 2022 database, which contains diffe
 
 To conduct the analysis, the key schema included:
 - Sales: Orders, Invoices, Customers, Sales Territory.
-- Production: Production Product
+- Production: Production Product.
 
 ## ETL Process 
 This process describes the various steps taken from ETL to analysis.
