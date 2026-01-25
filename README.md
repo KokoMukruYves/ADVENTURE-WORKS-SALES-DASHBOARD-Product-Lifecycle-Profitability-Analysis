@@ -1,5 +1,9 @@
 # ADVENTURE-WORKS-SALES-DASHBOARD-Product-Lifecycle-Profitability-Analysis
 This report analyzes Adventure’s sales performance to provide real-time insights for strategic decision-making. It tracks profitability across product categories and customer segments over time, helping identify growth opportunities, manage seasonal revenue declines, and understand customer spending behavior.
+## Link to access the interactive Dashboard
+
+https://app.powerbi.com/links/K2dMandbYQ?ctid=941bbf5f-f2c0-4875-a24c-6907865d251a&pbi_source=linkShare
+
 ## Adventure Logo
 ![Image](https://github.com/user-attachments/assets/cc8d80bb-1f7e-4d23-a8e9-aeba1cd99b11)
 
