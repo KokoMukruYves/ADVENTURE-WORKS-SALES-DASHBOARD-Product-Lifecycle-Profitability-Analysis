@@ -47,29 +47,27 @@ https://app.powerbi.com/links/K2dMandbYQ?ctid=941bbf5f-f2c0-4875-a24c-6907865d25
 ## Geographical Analysis Dashboard
 <img width="770" height="436" alt="Image" src="https://github.com/user-attachments/assets/09d44654-7901-4118-9e0f-1efef6ce1401" />
 
-## Executive Summary
-<img width="770" height="427" alt="Image" src="https://github.com/user-attachments/assets/42aab498-2ad9-4c50-942b-1df6d066f342" />
 
 ## Insights
 
-The visual analysis of different metrics leads to the conclusion that Bike, Clothing and accessories drive the most revenue (generating a profit margin of 9.06% approximately m.u 8.8M), and Pacific region (profit of around 32.36%). Accessories have the highest margin profit or return rates (over 50%). Road bikes are the most order sub product and the mountain Bike is topmost profitable. However, the Road frame is least product in term of profitability (generating a loss of 173 K from 2011 to 2014). Generally, from 2011 to 2014: the company generated around m.u 109.85 million in sales and 9.37 million in profit, reflecting a 69.41% year-over-year growth.
+The visual analysis of different metrics leads to the conclusion that Bike, Clothing and accessories drive the most revenue (generating a profit margin of 9.06% approximately m.u 8.8M), and Pacific region (profit of around 32.36%). Accessories have the highest margin profit or return rates (over 50%). Road bikes are the most order sub product and the mountain Bike is topmost profitable. However, the Road frame is least product in term of profitability (generating a loss of 173 K from 2011 to 2014). Generally, from 2011 to 2014: the company generated around m.u $109.85 million in sales and $9.37 million in profit, reflecting a 69.41% year-over-year growth.
 The analysis helps to identify underperforming regions like Central, North and Southern America. With respectively a negative margin profit of -3.88%, 1.8%, and -1.92%. These results are essential in guiding future decision making (resources allocation and marketing strategies).
  The whole scene is described as follow:
 
 ### Profitability insights:
 #### Sales performance
-From 2011 to 2014: the company generated around m.u 109.85 million in sales and 9.37 million in profit, reflecting a 69.41% year-over-year growth.
+From 2011 to 2014: the company generated around $109.85 million in sales and $9.37 million in profit, reflecting a 69.41% year-over-year growth.
 Top product:  accessories, Bikes and Clothing are the most ordered product, generating the highest margin profit.  Accessories lead with 41 000 orders, trailed by bikes at 37000 orders, and clothing at 21 000 orders. These three product categories have impact on Adventure sales landscape. Specially, accessories have the highest margin profit or return rates (over 50%).
-Road bikes are the most order sub product and the mountain Bike is topmost profitable. While the Road frame is least product in term of profitability (generating a loss of 173 K from 2011 to 2014).
+Road bikes are the most order sub product and the mountain Bike is topmost profitable. While the Road frame is least product in term of profitability (generating a loss of $173 K from 2011 to 2014).
 ### Regional insight/Geographical Analysis  
 The Business is run in 3 region (Pacific, Europe and North America) and 10 countries with Europe and Pacific generating over half of the total revenue.
--	Europe itself accounted of most of the order (27 000) and profit (317 million).
--	As individual country Australia accounted for most orders (15000) and profit (343 million).
+-	Europe itself accounted of most of the order (27 000) and profit ($317 millions).
+-	As individual country Australia accounted for most orders (15000) and profit ($343 millions).
 The analysis helps to identify underperforming regions like Central, North and Southern America. With respectively a negative margin profit of -3.88%, 1.8%, and -1.92%. These results are essential in guiding future decision making (resources allocation and marketing strategies).
 ### Time-based analysis
 A seasonal trend can be seen based on different periods (monthly, quarterly, or yearly). The peak is most often observed in January, June, August, October, and December. In term years, 2014 exhibits the highest overall best performance (margin profit of 17.16% and YoY growth of 32.12%).
 ### Customer segment and growth analysis
-- The company acquired 19000 customers over four years, processing 121000 orders at an average order value of m.u. 709.3.
+- The company acquired 19000 customers over four years, processing 121000 orders at an average order value of $709.3.
 -   The different customers are grouped into three segments: champions (1243 customers), at risk (3876 customers), and loyal customers (488 customers).
 ### Product Life Cycle
 To know how products behave over time, or the adventure process went through from the initial phase until the retirement from the market. These phases were divided into introduction (low sales), growth (increases in sales), maturity (sales slowdown because of competition and saturation of the market) and decline (sales decline and profit).
@@ -84,3 +82,6 @@ For the specific case of Adventure, some of its subcategory products were at int
 - Furthermore, the company ought to formulate strategies that focus on the retention of both champion and loyal customers; these strategies may encompass rewarding these individuals and inviting them to exclusive events. In relation to customers who are deemed at risk, the organization should systematically gather their feedback and modify their offerings to better align with these customers' needs.
 
 ![Image](https://github.com/user-attachments/assets/a2957299-6c8f-469a-bcb7-bfd7e3273289)
+
+# All right 
+## Koko Mukuru Yves
