@@ -7,8 +7,11 @@ Adventure Works is a global company that manufacturer and retails bikes and rela
 This report dives deep into Adventure's sales performance, arming decision-makers with real-time insights for strategic excellence. The present project aimed at tracking Adventure's profitability across product categories and customer segments. By tracking performance over time across product and customer segments, the company will easily identify growth opportunities and efficiently manage seasonal depressions in revenue. It also helps to understand customers' spending behaviour, a contribution to personalised marketing and retention strategies. Meaning that this report is designed to provide actionable insights into business performance across products, geographies, customer segments, and time periods.
 Throughout the project, these questions will drive our analysis: which product generates the most revenue, how does the sales growth vary over time, and what is the trend for future demands and revenues (based on forecasted values)?
 The analysis is based on the Adventure Works 2022 database, which contains different tables such as product management, HR and sales operations, manufacturing and purchasing and customer orders. The dataset combines sales data from 2011 to 2014.
+
 To conduct the analysis, the key schema included:
+
 Sales: Orders, Invoices, Customers, Sales Territory.
+
 Production: Production Product
 
 ## ETL Process 
