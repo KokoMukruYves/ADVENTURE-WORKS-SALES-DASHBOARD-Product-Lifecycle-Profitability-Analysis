@@ -1,5 +1,5 @@
   #                                   ADVENTURE WORKS SALES DASHBOARD
-![Image](https://github.com/user-attachments/assets/a2957299-6c8f-469a-bcb7-bfd7e3273289)
+
 # Product Lifecycle Profitability Analysis
 This report analyzes Adventure’s sales performance to provide real-time insights for strategic decision-making. It tracks profitability across product categories and customer segments over time, helping identify growth opportunities, manage seasonal revenue declines, and understand customer spending behavior.
 
@@ -79,3 +79,5 @@ For the specific case of Adventure, some of its subcategory products were at int
 - In the context of products situated within the maturity phase, it is imperative for the organization to critically evaluate their design or implement a discount strategy during the purchasing process, thereby minimizing inventory holding expenditures.
 - Given that the peak sales months are already established (January, June, August, October, and December), Adventure should strategically capitalize on these fluctuations by offering early-bird discounts.
 - Furthermore, the company ought to formulate strategies that focus on the retention of both champion and loyal customers; these strategies may encompass rewarding these individuals and inviting them to exclusive events. In relation to customers who are deemed at risk, the organization should systematically gather their feedback and modify their offerings to better align with these customers' needs.
+
+![Image](https://github.com/user-attachments/assets/a2957299-6c8f-469a-bcb7-bfd7e3273289)
