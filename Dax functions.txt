@@ -1,11 +1,13 @@
-I. Tables created
 1. Date Time Table 
+
  DimDate = 
   CALENDAR(
     MIN(FactSales[OrderDate]),
     MAX(FactSales[OrderDate])
   )
+
 2. Calculate table filter the top 6 subcategories in term of profit
+
 Top06 ProductSubcategories = 
 TOPN(
     06,
@@ -19,7 +21,9 @@ TOPN(
     [ProfitSales],
     DESC
 )
+
 3. Calculate table to filter the bottom 06 subcategories in term of profit  
+
 Bottom10ProductSubcategories = 
 TOPN(
     06,
@@ -33,11 +37,13 @@ TOPN(
     [ProfitSales],
     ASC
 )
+
 II. Columns created:
-a.	 Year = YEAR(DimDate[Date])
-b.	Quarter = "Q" & FORMAT(DimDate[Date],"Q")
-c.	MonthName = FORMAT(DimDate[Date],"MMMM")
-d.	Latitude = 
+
+Year = YEAR(DimDate[Date]);
+Quarter = "Q" & FORMAT(DimDate[Date],"Q");
+MonthName = FORMAT(DimDate[Date],"MMMM");
+Latitude = 
 SWITCH(
     TRUE(),
     'Sales SalesTerritory'[Name] = "Northwest", 2158,        
@@ -51,8 +57,8 @@ SWITCH(
     'Sales SalesTerritory'[Name] = "Australia", 330,        
     'Sales SalesTerritory'[Name] = "United Kingdom", 162,   
     BLANK()
-)
-e.	Longitude = 
+);
+Longitude = 
 SWITCH(
     TRUE(),
    'Sales SalesTerritory'[Name] = "Northwest", -122.4194,
@@ -66,9 +72,12 @@ SWITCH(
     'Sales SalesTerritory'[Name] = "Australia", 133.7751,
     'Sales SalesTerritory'[Name] = "United Kingdom", -3.436,
     BLANK()
-)
+) ;
+
 III.	Metrics 
+
 II.1. Profitability analysis metrics
+
 Total_Product_Cost=CALCULATE(SUMX(FactSales, FactSales[OrderQty]*RELATED(DimProduc[StandardCost])))
 Total_Revenue = SUM(FactSales[LineTotal])
 ProfitSales = [Total_Revenue]-[TotalCost]
@@ -85,9 +94,8 @@ Target_Order = 150000
 Target_Profit = 13000000
 Total_Orders = COUNTROWS(FactSales)
 Storage time = DATEDIFF(DimProduc[SellStartDate], DimProduc[SellEndDate], DAY)
-
-a.	Year over Year growth 
--	%%YoY_Trend_Emoji = 
+• Year over Year growth 
+%%YoY_Trend_Emoji = 
 VAR Growth = [YoY Sales %]
 RETURN 
 SWITCH(
@@ -106,19 +114,21 @@ VAR Change = [%MoM_Rev]
 RETURN 
 SWITCH(
     TRUE(),
-c    ISBLANK(Change), "⚪",    Change >= 0.10, "🟢",    Change >= 0.02, "🟡",    Change < 0.02, "🔴",    "⚪")
-	Frequency 
+    ISBLANK(Change), "⚪",    Change >= 0.10, "🟢",    Change >= 0.02, "🟡",    Change < 0.02, "🔴",    "⚪")
+
+ 
+• Frequency
 Frequency = 
 CALCULATE(
     COUNTROWS('DimCustomer'),
     ALLEXCEPT('DimCustomer', 'DimCustomer'[CustomerID])
-)
-•	Average Frequency
-Average_Frequency = 
+);
+
+• Average_Frequency = 
 AVERAGEX(
     VALUES(DimCustomer[CustomerID]),
     [Frequency]
-)
+);
 •	Frequency score
 FrequencyScore = 
 SWITCH(TRUE(),
@@ -202,7 +212,7 @@ CALCULATE(
     SUM('FactSales'[LineTotal]),
     DATESMTD('DimDate'[Date])
 )
-	RFM 
+• RFM 
 RFM_Score = 
 COALESCE([RecencyScore], 1)*100+
 COALESCE([FrequencyScore], 1)*100+
@@ -218,7 +228,7 @@ SWITCH(
     [RFM_Score]>= 6,  "Needs Attention",
     "At Risk"
 )
-	Product Life cycle 
+•	Product Life cycle 
 
 -- Product Life Cycle Stage = 
 VAR SalesThisMonth =
@@ -252,4 +262,3 @@ RETURN
         TrendRatio > 0.75, "Introduction",
         "Unknown"
     )
-
