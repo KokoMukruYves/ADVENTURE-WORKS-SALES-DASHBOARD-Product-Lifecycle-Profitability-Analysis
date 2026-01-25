@@ -17,13 +17,18 @@ This process describes the various steps taken from ETL to analysis
 The path followed was:
 <img width="695" height="496" alt="Image" src="https://github.com/user-attachments/assets/cd3c5277-38b2-4be7-8c16-9db87e5e09a9" />
 - Data extraction
+  
 The start point was to establish the connection between Power BI and SQL Server Management Studio, facilitating the importation of relevant tables for the analysis (Sales Customer, Sales SalesOrder Details, Sales SalesOrderHeader, Sales SalesTerritory, Production ProductCategory, Production ProductSubcategory and Production Product).
 - Data Cleaning
+
 Before analysis, data cleaning was essential, helping to improve the quality of the data and making it consistent, accurate, and trustworthy. During this phase missing values were handled using complete case analysis (removing the row or column containing the missing values), especially if it concerns the primary key. To ensure data uniqueness, duplicates were removed as well before analysis (for the sample in product names). We also check for any instances of incorrect or inconsistent values, such as negative prices or quantities. Finaly we also rename some column/feature to avoid ambiguity (e.g. group to Sales Region, Name to Country in Sales Territory table, Name to Product Name in Product Table, ….).  
 - Data transformation
+
 In this phase, before creating extra columns, some tables were merged: Sales SalesOrderDetail with Sales SalesOrderHeader, Product Product, Product Category and Product Subcategory, Customer and Person Person. After merging, extra columns were created or added; this was helpful before we could calculate certain measures like total profit, customer segment, total costs, YoY, MoM, frequency, monetary, recency, etc. To extract more insight from row data, extras tables were as well created: DateTime table was created before preforming some time intelligence function and Top06 and 06 Botton products tables were as well, helping in filtering the most/least performant sub product in the list.
 - Data modelling
+
 To ensure that the different schemas were not in silos, relationships were established based on the primary key. One-to-many relationships were the most frequent among tables. The figure below presents the relationship between different tables.
+
 
 After ensuring that all the data is safeguarded from messes, developing interactive dashboard follows using KPI, line charts, matrix, gauge, sheep map, and tree map. 
 
