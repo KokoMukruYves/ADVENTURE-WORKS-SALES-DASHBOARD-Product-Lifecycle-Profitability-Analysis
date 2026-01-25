@@ -1,0 +1,255 @@
+I. Tables created
+1. Date Time Table 
+ DimDate = 
+  CALENDAR(
+    MIN(FactSales[OrderDate]),
+    MAX(FactSales[OrderDate])
+  )
+2. Calculate table filter the top 6 subcategories in term of profit
+Top06 ProductSubcategories = 
+TOPN(
+    06,
+    ADDCOLUMNS(
+        SUMMARIZE(
+            FactSales,
+            DimProduc[Production ProductSubcategory.Name]
+        ),
+        "Profit", [ProfitSales]
+    ),
+    [ProfitSales],
+    DESC
+)
+3. Calculate table to filter the bottom 06 subcategories in term of profit  
+Bottom10ProductSubcategories = 
+TOPN(
+    06,
+    ADDCOLUMNS(
+        SUMMARIZE(
+            FactSales,
+            DimProduc[Production ProductSubcategory.Name]
+        ),
+        "Profit", [ProfitSales]
+    ),
+    [ProfitSales],
+    ASC
+)
+II. Columns created:
+a.	 Year = YEAR(DimDate[Date])
+b.	Quarter = "Q" & FORMAT(DimDate[Date],"Q")
+c.	MonthName = FORMAT(DimDate[Date],"MMMM")
+d.	Latitude = 
+SWITCH(
+    TRUE(),
+    'Sales SalesTerritory'[Name] = "Northwest", 2158,        
+    'Sales SalesTerritory'[Name] = "Northeast", 150,        
+    'Sales SalesTerritory'[Name] = "Central", 500,           
+    'Sales SalesTerritory'[Name] = "Southwest", 1200,       
+    'Sales SalesTerritory'[Name] = "Southeast", 150,       
+    'Sales SalesTerritory'[Name] = "Canada", 254,           
+    'Sales SalesTerritory'[Name] = "France", 430,           
+    'Sales SalesTerritory'[Name] = "Germany", 250,         
+    'Sales SalesTerritory'[Name] = "Australia", 330,        
+    'Sales SalesTerritory'[Name] = "United Kingdom", 162,   
+    BLANK()
+)
+e.	Longitude = 
+SWITCH(
+    TRUE(),
+   'Sales SalesTerritory'[Name] = "Northwest", -122.4194,
+    'Sales SalesTerritory'[Name] = "Northeast", -74.006,
+    'Sales SalesTerritory'[Name] = "Central", -95.7129,
+    'Sales SalesTerritory'[Name] = "Southwest", -112.074,
+    'Sales SalesTerritory'[Name] = "Southeast", -83,
+    'Sales SalesTerritory'[Name]= "Canada", -106.3468,
+    'Sales SalesTerritory'[Name] = "France", 2.2137,
+    'Sales SalesTerritory'[Name]= "Germany", 10.4515,
+    'Sales SalesTerritory'[Name] = "Australia", 133.7751,
+    'Sales SalesTerritory'[Name] = "United Kingdom", -3.436,
+    BLANK()
+)
+III.	Metrics 
+II.1. Profitability analysis metrics
+Total_Product_Cost=CALCULATE(SUMX(FactSales, FactSales[OrderQty]*RELATED(DimProduc[StandardCost])))
+Total_Revenue = SUM(FactSales[LineTotal])
+ProfitSales = [Total_Revenue]-[TotalCost]
+MoM_Profit = [ProfitSales]-[Profit_cPrev_Month]
+MoM_Rev = [Total_Revenue]-[Rev_Prev_Month
+Margin_Profit = [ProfitSales]/[Total_Revenue]
+Number_Customers = 
+DISTINCTCOUNT(FactSales[Sales SalesOrderHeader.CustomerID])
+NumberOrder = DISTINCTCOUNT(FactSales[SalesOrderID])
+AverageOrderValue = DIVIDE([Total_Revenue], [Total_Orders])
+Number_Region = DISTINCTCOUNT('Sales SalesTerritory'[Group])
+Number_Countries = DISTINCTCOUNT('Sales SalesTerritory'[Name])
+Target_Order = 150000
+Target_Profit = 13000000
+Total_Orders = COUNTROWS(FactSales)
+Storage time = DATEDIFF(DimProduc[SellStartDate], DimProduc[SellEndDate], DAY)
+
+a.	Year over Year growth 
+-	%%YoY_Trend_Emoji = 
+VAR Growth = [YoY Sales %]
+RETURN 
+SWITCH(
+    TRUE(),
+    ISBLANK(Growth), "⚪",    Growth >= 0.10, "🟢",    Growth >= 0.02, "🟡",    Growth < 0.02, "  ",    "⚪"
+-	 %MoM_Profit = DIVIDE([ProfitSales]-[Profit_Prev_Month], [ProfitSales], 0)
+-	%MoM_Profit_Trend_Emoji = 
+VAR Change = [%MoM_Profit]
+RETURN 
+SWITCH(
+    TRUE(),    ISBLANK(Change), "⚪",    Change >= 0.10, "🟢",    Change >= 0.02, "🟡",
+    Change < 0.02, "🔴",    "⚪")
+%MoM_Rev = DIVIDE([Total_Revenue]-[Rev_Prev_Month], [Rev_Prev_Month], 0)
+%MoM_Rev_Trend_Emoji = 
+VAR Change = [%MoM_Rev]
+RETURN 
+SWITCH(
+    TRUE(),
+c    ISBLANK(Change), "⚪",    Change >= 0.10, "🟢",    Change >= 0.02, "🟡",    Change < 0.02, "🔴",    "⚪")
+	Frequency 
+Frequency = 
+CALCULATE(
+    COUNTROWS('DimCustomer'),
+    ALLEXCEPT('DimCustomer', 'DimCustomer'[CustomerID])
+)
+•	Average Frequency
+Average_Frequency = 
+AVERAGEX(
+    VALUES(DimCustomer[CustomerID]),
+    [Frequency]
+)
+•	Frequency score
+FrequencyScore = 
+SWITCH(TRUE(),
+    [Frequency] >= 10, 5,
+    [Frequency] >= 7, 4,
+    [Frequency] >= 4, 3,
+    [Frequency] >= 2, 2,
+    1
+)
+	Monetary 
+Monetary = 
+CALCULATE(
+    SUM(FactSales[LineTotal]) - SUM(FactSales[Total_Product_Cost]),
+    ALLEXCEPT(DimCustomer, DimCustomer[CustomerID])
+)
+
+•	Average Monetary
+Average__Monetary = 
+AVERAGEX(
+    VALUES(FactSales[Sales SalesOrderHeader.CustomerID]),
+    CALCULATE(SUM(FactSales[LineTotal])-SUM(FactSales[Total_Product_Cost])
+    ))
+•	Monetary score
+MonetaryScore = 
+SWITCH(TRUE(),
+[Monetary]>=1000, 5, 
+[Monetary]>=750, 4,
+[Monetary]>5000, 3,
+[Monetary]>250, 2,
+1
+)
+	Recency 
+RecencyScore = 
+SWITCH(TRUE(),
+    [Recency]<=60,5,
+    [Recency]<=120,4,
+    [Recency]<=180,3,
+    [Recency]<300,2,
+    1
+)
+
+•	Average Recency 
+AverageRecency = 
+AVERAGEX(
+    VALUES(DimCustomer[CustomerID]), 
+    [Recency]
+)
+
+•	YOY
+YoY_Sales = 
+CALCULATE([Total_Revenue],
+    SAMEPERIODLASTYEAR('DimDate'[Date])
+)
+YoY Sales % = 
+DIVIDE(
+    [Total_Revenue] - [YoY_Sales],
+    [YoY_Sales],
+    0
+)
+•	Revenue Previous Month
+Rev_Prev_Month = 
+CALCULATE([Total_Revenue], DATEADD(DimDate[Date], -1, MONTH))
+•	Profit Previous Month 
+Profit_Prev_Month = 
+CALCULATE([ProfitSales], DATEADD(DimDate[Date], -1, MONTH))
+•	YTD
+YTDSales = 
+CALCULATE(
+    SUM('FactSales'[LineTotal]),
+    DATESYTD(DimDate[Date])
+)
+•	QTD Sales
+QTDSales = 
+CALCULATE(
+    SUM('FactSales'[LineTotal]),
+    DATESQTD('DimDate'[Date])
+)
+•	MTD Sales
+MTDSales = 
+CALCULATE(
+    SUM('FactSales'[LineTotal]),
+    DATESMTD('DimDate'[Date])
+)
+	RFM 
+RFM_Score = 
+COALESCE([RecencyScore], 1)*100+
+COALESCE([FrequencyScore], 1)*100+
+COALESCE([MonetaryScore], 1)*100
+
+•	Customer Segmentation
+Customer Segment = 
+SWITCH(
+    TRUE(),
+    [RFM_Score]>= 25, "Champions",
+    [RFM_Score]>= 18, "Loyal Customers",
+    [RFM_Score]>= 12, "Potential Loyalists",
+    [RFM_Score]>= 6,  "Needs Attention",
+    "At Risk"
+)
+	Product Life cycle 
+
+-- Product Life Cycle Stage = 
+VAR SalesThisMonth =
+    CALCULATE(
+        SUM(FactSales[LineTotal]),
+        DATESINPERIOD(
+            FactSales[OrderDate],
+            MAX(FactSales[OrderDate]),
+            -1,
+            MONTH
+        )
+    )
+VAR SalesLast12Months =
+    CALCULATE(
+        SUM(FactSales[LineTotal]),
+        DATESINPERIOD(
+            FactSales[OrderDate],
+            MAX(FactSales[OrderDate]),
+            -12,
+            MONTH
+        )
+    )
+VAR TrendRatio = DIVIDE(SalesThisMonth, SalesLast12Months, 0)
+
+RETURN
+    SWITCH(
+        TRUE(),
+        TrendRatio <= 0.05, "Decline",
+        TrendRatio <= 0.25, "Maturity",
+        TrendRatio <= 0.75, "Growth",
+        TrendRatio > 0.75, "Introduction",
+        "Unknown"
+    )
+
