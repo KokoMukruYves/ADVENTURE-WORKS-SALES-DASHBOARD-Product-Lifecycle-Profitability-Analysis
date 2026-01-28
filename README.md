@@ -12,7 +12,7 @@ To conduct the analysis, the key schema included:
 - Sales: Orders, Invoices, Customers, Sales Territory.
 - Production: Production Product.
 
-## ETL Process 
+## [ETL Process] ETL Process 
 This process describes the various steps taken from ETL to analysis.
 
 The path followed was:
@@ -35,7 +35,7 @@ To ensure that the different schemas were not in silos, relationships were estab
 
 After ensuring that all the data is safeguarded from messes, developing interactive dashboard follows using KPI, line charts, matrix, gauge, sheep map, and tree map. 
 
-## Dashboard overview
+## [Dashboard overview] Dashboard overview
 <img width="865" height="490" alt="Image" src="https://github.com/user-attachments/assets/9acefa34-adec-4ae1-b9fa-f66959db7206" />
 
 ## Profitability Analysis Dashboard
@@ -45,7 +45,7 @@ After ensuring that all the data is safeguarded from messes, developing interact
 <img width="770" height="436" alt="Image" src="https://github.com/user-attachments/assets/09d44654-7901-4118-9e0f-1efef6ce1401" />
 
 
-## Insights
+## [Insights] Insights
 
 The visual analysis of different metrics leads to the conclusion that Bike, Clothing and accessories drive the most revenue (generating a profit margin of 9.06% approximately m.u 8.8M), and Pacific region (profit of around 32.36%). Accessories have the highest margin profit or return rates (over 50%). Road bikes are the most order sub product and the mountain Bike is topmost profitable. However, the Road frame is least product in term of profitability (generating a loss of 173 K from 2011 to 2014). Generally, from 2011 to 2014: the company generated around m.u $109.85 million in sales and $9.37 million in profit, reflecting a 69.41% year-over-year growth.
 The analysis helps to identify underperforming regions like Central, North and Southern America. With respectively a negative margin profit of -3.88%, 1.8%, and -1.92%. These results are essential in guiding future decision making (resources allocation and marketing strategies).
@@ -69,7 +69,7 @@ A seasonal trend can be seen based on different periods (monthly, quarterly, or 
 ### Product Life Cycle
 To know how products behave over time, or the adventure process went through from the initial phase until the retirement from the market. These phases were divided into introduction (low sales), growth (increases in sales), maturity (sales slowdown because of competition and saturation of the market) and decline (sales decline and profit).
 For the specific case of Adventure, some of its subcategory products were at introduction (cable lock, front brakes, …), maturity (Fender Set-Mountain, HL Mountain Tire, HL Road Tire, Touring Tire Tube, Water Bottle, …), and decline (Hitch Rack-4-Bike, Hydration Pack-70).
-## Recommendations:
+## [Recommendations] Recommendations:
 - In order to enhance profitability, it is imperative for the organisation to allocate additional resources towards accessories and bikes, as these represent the foremost revenue-generating product categories.
 -  Establish promotional strategies for the highest-selling products (accessories, bicycles, and clothes).
 -  Concentrate marketing initiatives on regions exhibiting superior performance as determined by data analysis.
