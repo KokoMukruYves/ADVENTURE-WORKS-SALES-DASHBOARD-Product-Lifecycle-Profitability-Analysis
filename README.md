@@ -1,6 +1,5 @@
   #                                   ADVENTURE WORKS SALES DASHBOARD
 
-<details>
 <summary>Click to expand Table of Contents</summary>
 
 - [Introduction](#introduction)  
@@ -9,8 +8,9 @@
 - [Dashboard Overview](#dashboard-overview)  
 - [Results / Insights](#results--insights)  
 
-</details>
+
 ---
+
 # Introduction 
 
 Adventure Works is a global company that manufactures and retails bikes and related components. The company sells its products in North America, Europe, and Oceania.  
