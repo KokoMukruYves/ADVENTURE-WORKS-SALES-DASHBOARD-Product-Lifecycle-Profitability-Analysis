@@ -12,7 +12,7 @@ To conduct the analysis, the key schema included:
 - Sales: Orders, Invoices, Customers, Sales Territory.
 - Production: Production Product.
 
-## [ETL Process] (ETL Process)
+[ETL Process](#ETL Process)
 This process describes the various steps taken from ETL to analysis.
 
 The path followed was:
