@@ -1,5 +1,21 @@
   #                                   ADVENTURE WORKS SALES DASHBOARD
 
+  <details>
+  <summary>Click to expand Table of Contents</summary>
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Dataset / Source](#dataset--source)
+- [Installation / Setup](#installation--setup)
+- [Usage](#usage)
+- [Dashboard Screenshots](#dashboard-screenshots)
+- [Technologies Used](#technologies-used)
+- [Results / Insights](#results--insights)
+- [Contributing](#contributing)
+- [License](#license)
+
+</details>
+
 # Product Lifecycle Profitability Analysis
 This report analyzes Adventure’s sales performance to provide real-time insights for strategic decision-making. It tracks profitability across product categories and customer segments over time, helping identify growth opportunities, manage seasonal revenue declines, and understand customer spending behavior.
 
