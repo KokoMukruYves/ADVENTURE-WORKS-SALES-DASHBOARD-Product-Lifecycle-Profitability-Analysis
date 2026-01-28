@@ -11,6 +11,7 @@
 
 </details>
 ---
+# Introduction 
 
 Adventure Works is a global company that manufactures and retails bikes and related components. The company sells its products in North America, Europe, and Oceania.  
 
@@ -29,7 +30,7 @@ Key business questions addressed:
 
 # Product Lifecycle Profitability Analysis
 
-## 📈 Product Lifecycle Profitability Analysis
+## Product Lifecycle Profitability Analysis
 This report dives deep into Adventure’s sales performance, helping decision-makers:  
 - Identify growth opportunities  
 - Manage seasonal revenue declines  
@@ -39,25 +40,25 @@ This report dives deep into Adventure’s sales performance, helping decision-ma
 By tracking performance across products, geographies, and customer segments, the dashboard provides **actionable insights into business performance**.
 
 ---
-## ⚙️ ETL Process
+## ETL Process
 The analysis followed a structured **ETL pipeline**:
 
-### 🔹 Data Extraction
+### - Data Extraction
 - Connected Power BI to SQL Server Management Studio  
 - Imported relevant tables: `SalesCustomer`, `SalesOrderDetails`, `SalesOrderHeader`, `SalesTerritory`, `ProductCategory`, `ProductSubcategory`, `Product`  
 
-### 🔹 Data Cleaning
+### -  Data Cleaning
 - Handled missing values using complete case analysis  
 - Removed duplicates (e.g., product names)  
 - Corrected inconsistent values (e.g., negative prices/quantities)  
 - Renamed ambiguous columns (e.g., *Group → Sales Region*, *Name → Country*)  
 
-### 🔹 Data Transformation
+### -  Data Transformation
 - Merged tables (`SalesOrderDetail`, `SalesOrderHeader`, `Product`, `Category`, `Subcategory`, `Customer`)  
 - Created calculated columns (profit, costs, YoY, MoM, RFM metrics)  
 - Built supporting tables (DateTime, Top 6 Products, Bottom 6 Products)  
 
-### 🔹 Data Modeling
+### -  Data Modeling
 - Established **one-to-many relationships** across schemas  
 - Ensured relational integrity for analysis  
 
@@ -65,20 +66,20 @@ The analysis followed a structured **ETL pipeline**:
 <img width="695" height="496" alt="Schema" src="https://github.com/user-attachments/assets/cd3c5277-38b2-4be7-8c16-9db87e5e09a9" />
 
 ---
-## 📊 Dashboard Overview
+##  Dashboard Overview
 
-### 🔹 Sales Performance Dashboard
+### -  Sales Performance Dashboard
 <img width="865" height="490" alt="Sales Dashboard" src="https://github.com/user-attachments/assets/9acefa34-adec-4ae1-b9fa-f66959db7206" />
 
-### 🔹 Profitability Analysis Dashboard
+### -  Profitability Analysis Dashboard
 <img width="768" height="438" alt="Profitability Dashboard" src="https://github.com/user-attachments/assets/af312a7c-07d6-42e0-9df1-35e71cdfa453" />
 
-### 🔹 Geographical Analysis Dashboard
+### -  Geographical Analysis Dashboard
 <img width="770" height="436" alt="Geographical Dashboard" src="https://github.com/user-attachments/assets/09d44654-7901-4118-9e0f-1efef6ce1401" />
 
 ---
 
-## 📊 Results / Insights
+##  Results / Insights
 
 - **Top Revenue Drivers**: Bikes, Clothing, and Accessories (profit margin ~9.06%, ≈ $8.8M)  
 - **Regional Performance**: Pacific region leads with ~32.36% profit margin  
@@ -87,19 +88,19 @@ The analysis followed a structured **ETL pipeline**:
 - **Most Profitable Product**: Mountain Bikes  
 - **Least Profitable Product**: Road Frame (loss ≈ $173K from 2011–2014)  
 
-### 📌 Overall Performance (2011–2014)
+###  Overall Performance (2011–2014)
 - Total Sales: ≈ $109.85M  
 - Total Profit: ≈ $9.37M  
 - Year-over-Year Growth: ≈ 69.41%  
 
-### ⚠️ Underperforming Regions
+### Underperforming Regions
 - Central America: -3.88% margin  
 - North America: 1.8% margin  
 - Southern America: -1.92% margin  
 
 ---
 
-## ✅ Recommendations
+## Recommendations
 
 Based on the insights, the following strategic actions are recommended:
 
@@ -126,7 +127,7 @@ Based on the insights, the following strategic actions are recommended:
 
 ---
 
-
+![Image](https://github.com/user-attachments/assets/a2957299-6c8f-469a-bcb7-bfd7e3273289)
 
 
 
@@ -215,7 +216,7 @@ For the specific case of Adventure, some of its subcategory products were at int
 - Given that the peak sales months are already established (January, June, August, October, and December), Adventure should strategically capitalize on these fluctuations by offering early-bird discounts.
 - Furthermore, the company ought to formulate strategies that focus on the retention of both champion and loyal customers; these strategies may encompass rewarding these individuals and inviting them to exclusive events. In relation to customers who are deemed at risk, the organization should systematically gather their feedback and modify their offerings to better align with these customers' needs.
 
-![Image](https://github.com/user-attachments/assets/a2957299-6c8f-469a-bcb7-bfd7e3273289)
+
 
 - [License](#license)
 
