@@ -10,9 +10,8 @@
 - [Results / Insights](#results--insights)  
 
 </details>
-
 ---
-## Introduction
+
 Adventure Works is a global company that manufactures and retails bikes and related components. The company sells its products in North America, Europe, and Oceania.  
 
 This project presents an **interactive Power BI dashboard** analyzing Adventure’s sales performance. It provides **real-time insights for strategic decision-making**, tracking profitability across product categories and customer segments over time.  
@@ -40,7 +39,101 @@ This report dives deep into Adventure’s sales performance, helping decision-ma
 By tracking performance across products, geographies, and customer segments, the dashboard provides **actionable insights into business performance**.
 
 ---
+## ⚙️ ETL Process
+The analysis followed a structured **ETL pipeline**:
 
+### 🔹 Data Extraction
+- Connected Power BI to SQL Server Management Studio  
+- Imported relevant tables: `SalesCustomer`, `SalesOrderDetails`, `SalesOrderHeader`, `SalesTerritory`, `ProductCategory`, `ProductSubcategory`, `Product`  
+
+### 🔹 Data Cleaning
+- Handled missing values using complete case analysis  
+- Removed duplicates (e.g., product names)  
+- Corrected inconsistent values (e.g., negative prices/quantities)  
+- Renamed ambiguous columns (e.g., *Group → Sales Region*, *Name → Country*)  
+
+### 🔹 Data Transformation
+- Merged tables (`SalesOrderDetail`, `SalesOrderHeader`, `Product`, `Category`, `Subcategory`, `Customer`)  
+- Created calculated columns (profit, costs, YoY, MoM, RFM metrics)  
+- Built supporting tables (DateTime, Top 6 Products, Bottom 6 Products)  
+
+### 🔹 Data Modeling
+- Established **one-to-many relationships** across schemas  
+- Ensured relational integrity for analysis  
+
+**Schema Diagram:**  
+<img width="695" height="496" alt="Schema" src="https://github.com/user-attachments/assets/cd3c5277-38b2-4be7-8c16-9db87e5e09a9" />
+
+---
+## 📊 Dashboard Overview
+
+### 🔹 Sales Performance Dashboard
+<img width="865" height="490" alt="Sales Dashboard" src="https://github.com/user-attachments/assets/9acefa34-adec-4ae1-b9fa-f66959db7206" />
+
+### 🔹 Profitability Analysis Dashboard
+<img width="768" height="438" alt="Profitability Dashboard" src="https://github.com/user-attachments/assets/af312a7c-07d6-42e0-9df1-35e71cdfa453" />
+
+### 🔹 Geographical Analysis Dashboard
+<img width="770" height="436" alt="Geographical Dashboard" src="https://github.com/user-attachments/assets/09d44654-7901-4118-9e0f-1efef6ce1401" />
+
+---
+
+## 📊 Results / Insights
+
+- **Top Revenue Drivers**: Bikes, Clothing, and Accessories (profit margin ~9.06%, ≈ $8.8M)  
+- **Regional Performance**: Pacific region leads with ~32.36% profit margin  
+- **High Margin Products**: Accessories (>50% return rates)  
+- **Most Ordered Product**: Road Bikes  
+- **Most Profitable Product**: Mountain Bikes  
+- **Least Profitable Product**: Road Frame (loss ≈ $173K from 2011–2014)  
+
+### 📌 Overall Performance (2011–2014)
+- Total Sales: ≈ $109.85M  
+- Total Profit: ≈ $9.37M  
+- Year-over-Year Growth: ≈ 69.41%  
+
+### ⚠️ Underperforming Regions
+- Central America: -3.88% margin  
+- North America: 1.8% margin  
+- Southern America: -1.92% margin  
+
+---
+
+## ✅ Recommendations
+
+Based on the insights, the following strategic actions are recommended:
+
+1. **Focus on High-Margin Products**  
+   - Increase marketing and production of Accessories and Mountain Bikes.  
+   - Bundle high-margin products with popular items to maximize profitability.  
+
+2. **Address Underperforming Regions**  
+   - Investigate causes of low profitability in Central, North, and Southern America.  
+   - Implement targeted promotions and localized marketing strategies.  
+   - Optimize distribution channels to reduce costs.  
+
+3. **Product Lifecycle Management**  
+   - Phase out or redesign low-performing products like Road Frames.  
+   - Introduce new product lines to sustain growth and meet forecasted demand.  
+
+4. **Customer Segmentation & Retention**  
+   - Use RFM (Recency, Frequency, Monetary) analysis to identify loyal customers.  
+   - Launch personalized campaigns to improve retention and upselling.  
+
+5. **Seasonal Strategy**  
+   - Prepare inventory and marketing campaigns ahead of Q4 peak sales.  
+   - Diversify product offerings to mitigate seasonal revenue declines.  
+
+---
+
+
+
+
+
+
+
+
+## Introduction
 
 This report analyzes Adventure’s sales performance to provide real-time insights for strategic decision-making. It tracks profitability across product categories and customer segments over time, helping identify growth opportunities, manage seasonal revenue declines, and understand customer spending behavior.
 
