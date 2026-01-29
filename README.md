@@ -16,6 +16,7 @@
 <details>
 <summary id="introduction"> Introduction</summary>
 
+
 Adventure Works is a global company that manufactures and retails bikes and related components. The company sells its products in North America, Europe, and Oceania.  
 
 This project presents an **interactive Power BI dashboard** analyzing Adventure’s sales performance. It provides **real-time insights for strategic decision-making**, tracking profitability across product categories and customer segments over time.  
@@ -36,6 +37,7 @@ Key business questions addressed:
   
 <summary id="product-lifecycle-profitability-analysis"> Product Lifecycle Profitability Analysis</summary>
 
+
 This report dives deep into Adventure’s sales performance, helping decision-makers:  
 - Identify growth opportunities  
 - Manage seasonal revenue declines  
@@ -51,7 +53,9 @@ By tracking performance across products, geographies, and customer segments, the
 <details>
 <summary id="etl-process"> ETL Process</summary>
 
+
 The analysis followed a structured **ETL pipeline**:
+
 
 ### - Data Extraction
 - Connected Power BI to SQL Server Management Studio  
@@ -82,6 +86,7 @@ The analysis followed a structured **ETL pipeline**:
 
 <summary id="dashboard-overview">Dashboard Overview</summary>
 
+
 ###  Sales Performance Dashboard
 <img width="865" height="490" alt="Sales Dashboard" src="https://github.com/user-attachments/assets/9acefa34-adec-4ae1-b9fa-f66959db7206" />
 
@@ -97,6 +102,7 @@ The analysis followed a structured **ETL pipeline**:
 <details>
 
 <summary id="results--insights"> Results / Insights</summary>
+
 
 
 - **Top Revenue Drivers**: Bikes, Clothing, and Accessories (profit margin ~9.06%, ≈ $8.8M)  
@@ -122,6 +128,7 @@ The analysis followed a structured **ETL pipeline**:
 <details>
 
 <summary id="recommendations"> Recommendations</summary>
+
 
 Based on the insights, the following strategic actions are recommended:
 
