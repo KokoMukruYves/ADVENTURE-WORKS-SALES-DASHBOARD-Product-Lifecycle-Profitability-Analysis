@@ -5,6 +5,7 @@
 <summary id="introduction"> Introduction</summary>
 
 
+
 Adventure Works is a global company that manufactures and retails bikes and related components. The company sells its products in North America, Europe, and Oceania.  
 
 This project presents an **interactive Power BI dashboard** analyzing Adventure’s sales performance. It provides **real-time insights for strategic decision-making**, tracking profitability across product categories and customer segments over time.  
@@ -24,6 +25,8 @@ Key business questions addressed:
 <details>
   
 <summary id="product-lifecycle-profitability-analysis"> Product Lifecycle Profitability Analysis</summary>
+
+
 
 
 This report dives deep into Adventure’s sales performance, helping decision-makers:  
