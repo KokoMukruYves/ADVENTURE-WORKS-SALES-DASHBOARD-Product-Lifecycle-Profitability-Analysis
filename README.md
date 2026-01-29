@@ -76,10 +76,10 @@ The analysis followed a structured **ETL pipeline**:
 <img width="695" height="496" alt="Schema" src="https://github.com/user-attachments/assets/cd3c5277-38b2-4be7-8c16-9db87e5e09a9" />
 
 </details>
+
 ---
-
-
 <details>
+
 <summary id="dashboard-overview">Dashboard Overview</summary>
 
 ### -  Sales Performance Dashboard
@@ -92,10 +92,10 @@ The analysis followed a structured **ETL pipeline**:
 <img width="770" height="436" alt="Geographical Dashboard" src="https://github.com/user-attachments/assets/09d44654-7901-4118-9e0f-1efef6ce1401" />
 
 </details>
+
 ---
-
-
 <details>
+
 <summary id="results--insights"> Results / Insights</summary>
 
 
@@ -117,10 +117,10 @@ The analysis followed a structured **ETL pipeline**:
 - Southern America: -1.92% margin  
 
 </details>
+
 ---
-
-
 <details>
+
 <summary id="recommendations"> Recommendations</summary>
 
 Based on the insights, the following strategic actions are recommended:
@@ -147,7 +147,9 @@ Based on the insights, the following strategic actions are recommended:
    - Diversify product offerings to mitigate seasonal revenue declines.  
 
 </details>
+
 ---
+<details>
 
 ![Image](https://github.com/user-attachments/assets/a2957299-6c8f-469a-bcb7-bfd7e3273289)
 
