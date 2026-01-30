@@ -2,7 +2,6 @@
 
 <img width="175" height="163" alt="Image" src="https://github.com/user-attachments/assets/03f1258a-6c39-491e-9600-9c6f7ae59c26" />
 
-https://app.powerbi.com/links/K2dMandbYQ?ctid=941bbf5f-f2c0-4875-a24c-6907865d251a&pbi_source=linkShare
 
  ## Product Lifecycle Profitability Analysis
 
@@ -145,6 +144,9 @@ Based on the insights, the following strategic actions are recommended:
 </details>
 
 ---
+
+[![Power BI Dashboard](https://img.shields.io/badge/Click_here_to_access_the_interactive_dashboard-F2C811?style=for-the-badge&logo=microsoftpowerbi&logoColor=black)](https://app.powerbi.com/links/K2dMandbYQ?ctid=941bbf5f-f2c0-4875-a24c-6907865d251a&pbi_source=linkShare)
+
 
 ## 🔗 Connect with me
 
