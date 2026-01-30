@@ -144,6 +144,14 @@ Based on the insights, the following strategic actions are recommended:
 
 ---
 
+## 📬 Contact
+
+**© 2026 Koko Mukuru Yves**. All rights reserved.
+
+Email: kmukuru_yves@st.ug.edu.gh 
+
+LinkedIn: https://www.linkedin.com/in/koko-mukuru-yves-98621a14a
+
 
 
 
